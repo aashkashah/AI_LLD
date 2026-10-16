@@ -1,0 +1,49 @@
+class BookingSystem:
+    - theatres: List<Theatre>
+
+    + searchMovies(title: string) -> List<Showtime>
+    + getShowtimesAtTheatre(theatre: Theatre) -> List<showtime>
+    + book()
+    + cancelReservation()
+
+class Theatre:
+    id: string
+    name: string
+    showtimes: List<Showtime>
+
+    + getShowtimes()
+    + getShowtimesForMovie()
+
+class Showtime:
+    id: string
+    theatre: Theatre
+    datetime: datetime
+    screenLabel: string
+    movie: movie
+    reservations: List<Reservation>
+
+    + getId()
+    + getTheatre()
+    + getDatetime()
+    + getMovie()
+    + isAvailable()
+    + getAvailableSeats()
+    + book()
+    + cancel()
+
+class Movie:
+    - id: string
+    - title: string
+
+    + getTitle() → string
+    + getId() → string
+
+class Reservation:
+    - confirmationId: string
+    - showtime: Showtime
+    - seatIds: List<string>
+
+    + getConfirmationId() → string
+    + getSeatIds() → List<string>
+    + getShowtime() → Showtime
+    
