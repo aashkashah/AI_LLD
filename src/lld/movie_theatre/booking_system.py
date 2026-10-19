@@ -1,8 +1,8 @@
 
-from lld.movie import Movie
-from lld.reservation import Reservation
-from lld.showtime import Showtime
-from lld.theatre import Theatre
+from lld.movie_theatre.movie import Movie
+from lld.movie_theatre.reservation import Reservation
+from lld.movie_theatre.showtime import Showtime
+from lld.movie_theatre.theatre import Theatre
 
 
 class BookingSystem:

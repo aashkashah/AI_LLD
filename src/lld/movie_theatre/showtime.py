@@ -4,11 +4,11 @@ import threading
 from datetime import datetime
 from typing import TYPE_CHECKING
 
-from lld.movie import Movie
-from lld.reservation import Reservation
+from lld.movie_theatre.movie import Movie
+from lld.movie_theatre.reservation import Reservation
 
 if TYPE_CHECKING:
-    from lld.theatre import Theatre
+    from lld.movie_theatre.theatre import Theatre
 
 
 class Showtime:

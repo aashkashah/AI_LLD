@@ -2,10 +2,10 @@ from datetime import datetime
 
 import pytest
 
-from lld.booking_system import BookingSystem
-from lld.movie import Movie
-from lld.showtime import Showtime
-from lld.theatre import Theatre
+from lld.movie_theatre.booking_system import BookingSystem
+from lld.movie_theatre.movie import Movie
+from lld.movie_theatre.showtime import Showtime
+from lld.movie_theatre.theatre import Theatre
 
 
 def test_search_movies_finds_showtimes_across_theatres(system: BookingSystem, showtime: Showtime, inception: Movie) -> None:

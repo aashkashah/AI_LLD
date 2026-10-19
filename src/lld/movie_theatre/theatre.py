@@ -1,6 +1,6 @@
 
-from lld.movie import Movie
-from lld.showtime import Showtime
+from lld.movie_theatre.movie import Movie
+from lld.movie_theatre.showtime import Showtime
 
 
 class Theatre:

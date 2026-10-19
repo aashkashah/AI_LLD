@@ -1,8 +1,8 @@
 from datetime import datetime
 
-from lld.movie import Movie
-from lld.showtime import Showtime
-from lld.theatre import Theatre
+from lld.movie_theatre.movie import Movie
+from lld.movie_theatre.showtime import Showtime
+from lld.movie_theatre.theatre import Theatre
 
 
 def test_new_theatre_has_no_showtimes(theatre: Theatre) -> None:

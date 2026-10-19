@@ -1,14 +1,13 @@
 from datetime import datetime
-from typing import List
 
 import pytest
 
-from lld.booking_system import BookingSystem
-from lld.movie import Movie
-from lld.showtime import Showtime
-from lld.theatre import Theatre
+from lld.movie_theatre.booking_system import BookingSystem
+from lld.movie_theatre.movie import Movie
+from lld.movie_theatre.showtime import Showtime
+from lld.movie_theatre.theatre import Theatre
 
-SEATS: List[str] = ["A1", "A2", "A3", "A4", "A5"]
+SEATS: list[str] = ["A1", "A2", "A3", "A4", "A5"]
 
 
 # Fixtures are like injected test dependencies: pytest passes them in by parameter name.

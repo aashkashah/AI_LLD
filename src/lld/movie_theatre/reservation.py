@@ -5,7 +5,7 @@ from __future__ import (
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:  # only imported for type checkers, never at runtime
-    from lld.showtime import Showtime
+    from lld.movie_theatre.showtime import Showtime
 
 
 class Reservation:
