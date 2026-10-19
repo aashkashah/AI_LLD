@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import threading
 from datetime import datetime
-from typing import TYPE_CHECKING, List
+from typing import TYPE_CHECKING
 
 from lld.movie import Movie
 from lld.reservation import Reservation
@@ -19,15 +19,15 @@ class Showtime:
         start_time: datetime,
         screen_label: str,
         movie: Movie,
-        all_seat_ids: List[str],
+        all_seat_ids: list[str],
     ) -> None:
         self._id: str = showtime_id
         self._theatre: Theatre = theatre
         self._start_time: datetime = start_time
         self._screen_label: str = screen_label
         self._movie: Movie = movie
-        self._all_seat_ids: List[str] = all_seat_ids
-        self._reservations: List[Reservation] = []
+        self._all_seat_ids: list[str] = all_seat_ids
+        self._reservations: list[Reservation] = []
         # Guards booking/cancel so two users can't take the same seat (≈ C# lock object).
         self._lock: threading.Lock = threading.Lock()
 
@@ -49,10 +49,10 @@ class Showtime:
     def is_available(self, seat_id: str) -> bool:
         raise NotImplementedError
 
-    def get_available_seats(self) -> List[str]:
+    def get_available_seats(self) -> list[str]:
         raise NotImplementedError
 
-    def book(self, seat_ids: List[str]) -> Reservation:
+    def book(self, seat_ids: list[str]) -> Reservation:
         raise NotImplementedError
 
     def cancel(self, confirmation_id: str) -> None:
